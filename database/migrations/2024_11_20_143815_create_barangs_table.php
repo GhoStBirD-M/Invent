@@ -21,6 +21,7 @@ return new class extends Migration
             $table->foreignId('kategori_id')->constrained()->cascadeOnDelete();;
             $table->foreignId('pemasok_id')->constrained()->cascadeOnDelete();
             $table->foreignId('gudang_id')->constrained();
+            $table->boolean('notifikasi')->default(0);
             $table->timestamps();
         });
     }
